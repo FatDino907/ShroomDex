@@ -1,0 +1,6 @@
+const APP='ff-app-v1',TILES='ff-tiles',EXT=['https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js','https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(APP).then(async c=>{await c.addAll(['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png','apple-touch-icon.png']);await Promise.allSettled(EXT.map(u=>c.add(u)))}).then(()=>self.skipWaiting())));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n.startsWith('ff-app')&&n!==APP).map(n=>caches.delete(n)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',e=>{const r=e.request,u=new URL(r.url);if(r.method!=='GET')return;
+if(u.hostname==='tile.openstreetmap.org'){e.respondWith(caches.open(TILES).then(async c=>{const h=await c.match(r);if(h)return h;try{const n=await fetch(r);if(n.ok){c.put(r,n.clone());c.keys().then(k=>{if(k.length>4000)k.slice(0,500).forEach(x=>c.delete(x))})}return n}catch(x){return new Response('',{status:504})}}));return}
+if(u.origin===location.origin||EXT.includes(r.url)){e.respondWith((async()=>{const h=await caches.match(r,{ignoreSearch:true});const n=fetch(r).then(x=>{if(x.ok)caches.open(APP).then(c=>c.put(r,x.clone()));return x}).catch(()=>h);return h||n})())}});
