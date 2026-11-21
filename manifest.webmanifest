@@ -1,6 +1,6 @@
 {
- "name": "Forbidden Fruit",
- "short_name": "Forbidden Fruit",
+ "name": "ShroomDex",
+ "short_name": "ShroomDex",
  "description": "A mushroom-hunting field journal game",
  "start_url": "./",
  "scope": "./",
