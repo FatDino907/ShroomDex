@@ -117,7 +117,7 @@ header h1{font-size:28px;line-height:1;color:var(--ink)}header small{font:italic
 nav{gap:10px;padding:10px 12px 12px}
 .tab{border-radius:3px 3px 10px 10px;border:1.5px solid var(--ink);background:var(--noise),var(--panel);color:var(--ink);font:18px var(--fhead);padding:10px 12px 10px 24px;box-shadow:inset 0 0 0 3px var(--panel),inset 0 0 0 4px rgba(54,38,26,.28),1px 2px 0 rgba(54,38,26,.3)}
 .tab[aria-pressed="true"]{background:var(--pine);color:var(--bg);border-color:var(--ink);box-shadow:inset 0 0 0 3px var(--pine),inset 0 0 0 4px rgba(246,237,216,.55),1px 2px 0 rgba(54,38,26,.35)}
-.tab[aria-pressed="true"]::before{background:var(--pine);border-color:#f6edd8}
+.tab[aria-pressed="true"]::before{background:var(--pine);border-color:#f6edd8}nav{gap:7px}nav .tab{font-size:16px;padding:10px 4px 10px 17px;min-width:0;white-space:nowrap;letter-spacing:0}nav .tab::before{left:6px;width:5px;height:5px}.gain{font:20px var(--fhead);color:var(--pine);margin:4px 0}
 .sp:focus-visible,.tab:focus-visible,button:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
 #dq,#pq{border-radius:3px;border:1.5px solid var(--ink2);background:var(--panel);color:var(--ink);font:16px var(--fbody);box-shadow:inset 0 1px 3px rgba(54,38,26,.18)}
 #dq::placeholder,#pq::placeholder{color:var(--mute);font-style:italic}
@@ -170,19 +170,69 @@ textarea,#pick,select{border-radius:3px!important;border:1.5px solid var(--ink2)
 .sp{border-width:2.5px;background:var(--panel);box-shadow:0 0 0 1.5px var(--ink),2px 3px 0 rgba(30,20,10,.3);font-family:var(--fhead)}
 .tgt{border-color:var(--pine)}.shr{border-color:var(--rust)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) img.mg,:root:not([data-theme="light"]) .tile img,:root:not([data-theme="light"]) .card img.art,:root:not([data-theme="light"]) .cand img,:root:not([data-theme="light"]) .opt img{mix-blend-mode:normal}:root:not([data-theme="light"]) .card h2::after,:root:not([data-theme="light"]) header::after,:root:not([data-theme="light"]) .fam,:root:not([data-theme="light"]) .pfh{filter:none}}
-</style><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="logo.svg" type="image/svg+xml"><link rel="preload" href="fonts/fell.woff2" as="font" type="font/woff2" crossorigin><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="ShroomaDex"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#36261a">
+/* ===== v15 journal, stamps, skins, cosmetics ===== */
+#ach{position:absolute;inset:0;overflow:auto;padding:6px 14px 28px}
+.lv{display:flex;flex-direction:column;align-items:flex-end;line-height:1.25}.lv .rank{font:16px/1.1 var(--fhead);color:var(--pine);white-space:nowrap}
+.jpage{position:relative;margin:12px 0 18px;padding:16px 16px 18px;background:var(--noise),radial-gradient(120% 60% at 50% 0%,rgba(255,250,236,.45),transparent 60%),var(--panel);border:1.5px solid var(--ink);border-radius:4px;box-shadow:inset 0 0 0 5px var(--panel),inset 0 0 0 6px rgba(54,38,26,.25),2px 4px 0 rgba(30,20,10,.22);text-align:center}
+.jpage h2{font-size:26px}.jpage h2::after{content:"";display:block;height:14px;width:170px;max-width:70%;margin:4px auto 6px;background:var(--flour) center/contain no-repeat}
+.jpage .rk{font:20px var(--fhead);margin:4px 0}.jpage .rk b{font-weight:400;color:var(--pine)}
+.bar.big{height:10px;margin:8px auto;max-width:280px}
+.xpt{margin:10px auto 0;border-collapse:collapse;font-size:14px;min-width:230px}.xpt td{padding:3px 6px;border-bottom:1px dotted var(--line);text-align:left}.xpt td+td{text-align:right;font-variant-numeric:tabular-nums}
+.stamps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 8px;margin-top:10px}
+.sc{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;line-height:1.25}
+.sc .stamp{width:74px;height:74px}.stamp.off{color:var(--line)}.stamp.on{mix-blend-mode:multiply;opacity:.92}
+.sc b{font:15px/1.1 var(--fhead);font-weight:400;color:var(--ink);margin-top:4px}.sc small{color:var(--mute)}.sc .xp{font:700 10.5px var(--fbody);letter-spacing:.05em;color:var(--ink2);border:1px solid var(--line);border-radius:2px;padding:0 5px;margin-top:2px}
+.sc:not(.got) b{color:var(--mute)}
+.jh{font-size:20px;margin:6px 0 8px}.jh:not(:first-child){margin-top:18px}
+.looks{display:flex;flex-direction:column;gap:6px}
+.lk{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:8px 10px;border-radius:3px;border:1.2px solid var(--line);background:var(--noise),var(--paper2);color:var(--ink);font:inherit;cursor:pointer;box-shadow:1px 2px 0 rgba(54,38,26,.14)}
+.lk b{font:17px var(--fhead);font-weight:400}.lk small{color:var(--mute)}
+.lk.on{border:2px solid var(--pine);box-shadow:inset 0 0 0 3px var(--paper2),inset 0 0 0 4px color-mix(in srgb,var(--pine) 45%,transparent)}
+.lk[aria-disabled="true"]{opacity:.62;border-style:dashed}
+.sw{flex:0 0 auto;display:inline-flex;width:44px;height:44px;border-radius:50%;overflow:hidden;border:1.5px solid var(--ink);transform:rotate(-20deg)}.sw i{flex:1}
+.pv{border-radius:50%;background:center/cover no-repeat url(icon-192.png);transform:none}
+.pv-pin-ink{box-shadow:0 0 0 1.5px var(--ink)}.pv-pin-seal{border:3px solid #8c3b20;box-shadow:0 0 0 2px #5e2410,0 0 0 5px rgba(140,59,32,.3);border-radius:46% 54% 50% 50%/52% 48% 52% 48%}.pv-pin-brass{border:3px solid #b8913a;box-shadow:0 0 0 1.5px #5a4214}
+.pv-frame-ink{border-radius:2px;border:1.5px solid var(--ink2)}.pv-frame-polaroid{border-radius:1px;border:4px solid #fbf8f0;border-bottom-width:10px;box-shadow:1px 2px 3px rgba(0,0,0,.35);transform:rotate(-3deg)}.pv-frame-gilt{border-radius:1px;border:4px solid #b8913a;box-shadow:inset 0 0 0 1px #f2d98a,0 0 0 1px #5a4214}
+.rules{text-align:left;margin:6px 0 0;padding-left:20px;font-size:14px}.rules li{margin:3px 0}
+.stpop{position:fixed;left:50%;top:18%;z-index:40;pointer-events:none;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .45s,transform .45s}
+.stpop .stamp{width:132px;height:132px;animation:stampIn .55s cubic-bezier(.2,1.5,.4,1) both;filter:drop-shadow(0 2px 0 rgba(251,241,220,.8))}
+.stpop .lab{background:var(--noise),var(--panel);border:1.5px solid var(--ink);border-radius:3px;padding:8px 14px;box-shadow:inset 0 0 0 3px var(--panel),inset 0 0 0 4px rgba(54,38,26,.25),2px 4px 0 rgba(30,20,10,.3);text-align:center;max-width:260px;animation:labIn .5s .25s both}
+.stpop .lab b{display:block;font:21px var(--fhead);font-weight:400}.stpop .lab small{color:var(--mute)}
+.stpop.out{opacity:0;transform:translateX(-50%) translateY(-12px)}
+@keyframes stampIn{0%{transform:scale(2.8) rotate(-30deg);opacity:0}55%{opacity:1}75%{transform:scale(.92) rotate(-6deg)}100%{transform:scale(1) rotate(-8deg);opacity:1}}
+@keyframes labIn{from{opacity:0;transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){.stpop .stamp,.stpop .lab{animation:none}}
+/* skins */
+:root[data-skin="moss"]{--bg:#dde2c6;--panel:#eef0dc;--paper2:#e5e9cf;--ink:#22301d;--ink2:#3d5233;--mute:#55613f;--line:#8f9c72;--pine:#2f5a2c;--rust:#7a4620;--red:#7a4620;--ochre:#7d6110;--notm:#41505a;--map1:#cfd6b4}
+:root[data-skin="rust"]{--bg:#e9d0b0;--panel:#f6e5cd;--paper2:#efd9bb;--ink:#3a1f12;--ink2:#6a3417;--mute:#71503a;--line:#b07a52;--pine:#55531f;--rust:#9e3c19;--red:#9e3c19;--ochre:#8f5a0c;--map1:#dcc19c}
+:root[data-skin="gilded"]{--bg:#ede3c9;--panel:#fbf5e6;--paper2:#f5ebd3;--ink:#241910;--ink2:#6b4f16;--mute:#6a5634;--line:#b8963d;--pine:#26473a;--rust:#6b1d1d;--red:#6b1d1d;--ochre:#8a6812;--map1:#e2d5b3}
+:root[data-skin="gilded"] .card,:root[data-skin="gilded"] .jpage{border-color:#7a5a12;box-shadow:inset 0 0 0 5px var(--panel),inset 0 0 0 7px #c9a443,inset 0 0 0 8px #7a5a12,3px 5px 0 rgba(20,12,6,.3)}
+:root[data-skin="gilded"] header h1{background:linear-gradient(180deg,#8a6414,#c9a443 45%,#6b4a0c);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-skin="gilded"] .tab[aria-pressed="true"]{background:linear-gradient(180deg,#2f5444,#1f3a2e);box-shadow:inset 0 0 0 3px #26473a,inset 0 0 0 4.5px #c9a443,1px 2px 0 rgba(54,38,26,.35)}
+:root[data-skin="moss"] .leaflet-tile-pane{filter:sepia(.15) saturate(.95) hue-rotate(10deg)}
+/* pins */
+.pins-seal .pin{border:3px solid #8c3b20!important;box-shadow:0 0 0 2px #5e2410,0 0 0 5px rgba(140,59,32,.35),2px 3px 4px rgba(0,0,0,.45)!important;border-radius:46% 54% 50% 50%/52% 48% 52% 48%!important}
+.pins-brass .pin{border:3px solid #b8913a!important;box-shadow:0 0 0 1.5px #5a4214,2px 3px 4px rgba(0,0,0,.45)!important}
+.pins-brass .pin::after{content:"";position:absolute;left:50%;top:-10px;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f6e3a1,#b8913a 55%,#5a4214);box-shadow:0 1px 2px rgba(0,0,0,.5)}
+/* photo frames */
+.frames-polaroid .ph,.frames-polaroid .ang img,.frames-polaroid .two img,.frames-polaroid .cand[style*="default"]>img{background:#fbf8f0!important;border:0!important;padding:6px 6px 16px!important;border-radius:1px!important;box-shadow:1px 3px 5px rgba(30,20,10,.35)!important;transform:rotate(-1.2deg);box-sizing:border-box}
+.frames-polaroid .ang img{padding:3px 3px 8px!important}
+.frames-gilt .ph,.frames-gilt .ang img,.frames-gilt .two img,.frames-gilt .cand[style*="default"]>img{border:5px solid #b8913a!important;border-radius:1px!important;box-shadow:inset 0 0 0 1px #f2d98a,0 0 0 1px #5a4214,2px 3px 4px rgba(30,20,10,.3)!important;box-sizing:border-box}
+.frames-gilt .ang img{border-width:3px!important}
+</style><script>try{const L=JSON.parse(localStorage.getItem('ff-look')||'{}'),r=document.documentElement;if(L.skin==='night')r.setAttribute('data-theme','dark');else if(L.skin&&L.skin!=='auto'){r.setAttribute('data-theme','light');if(L.skin!=='parchment')r.setAttribute('data-skin',L.skin)}}catch(e){}</script><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="logo.svg" type="image/svg+xml"><link rel="preload" href="fonts/fell.woff2" as="font" type="font/woff2" crossorigin><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="ShroomaDex"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#36261a">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 </head>
 <body><div id="app">
-<header><div class="brand"><img src="icon-192.png" alt="" width="44" height="44"><div><h1>ShroomaDex</h1><small>The Sweet Smell of Decay · v14</small></div></div>
-<div class="lv"><span id="lvl"></span><div class="bar"><i id="xpb"></i></div></div></header>
+<header><div class="brand"><img src="icon-192.png" alt="" width="44" height="44"><div><h1>ShroomaDex</h1><small>The Sweet Smell of Decay · v15</small></div></div>
+<div class="lv"><span id="rank" class="rank"></span><span id="lvl"></span><div class="bar"><i id="xpb"></i></div></div></header>
 <main>
 <section id="map" aria-label="Map"></section>
 <section id="dex" hidden aria-label="Mushroomdex"></section>
+<section id="ach" hidden aria-label="Field journal: stamps, XP and themes"></section>
 <button class="chip" id="loc">Locate me</button><div class="fab"><button class="upb" id="upb" aria-label="Upload photos from your gallery" title="Upload photos"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.3 12.4c-.1-1.6 1-2.7 2.5-2.7l26.8-.3c1.5 0 2.6 1.1 2.6 2.6l.2 23.6c0 1.5-1.1 2.7-2.6 2.7l-26.8.2c-1.5 0-2.6-1.1-2.6-2.6z"/><path d="M9.2 31.5l8.8-8.6 6.4 6.1 4.2-3.9 9.9 8.6"/><circle cx="31.5" cy="17.4" r="2.6"/><path d="M24 44.5V35.8M20.3 39.3l3.7-3.9 3.8 3.8" stroke-width="2.2"/></svg></button><button class="camb" id="camb" aria-label="Photograph a mushroom" title="Take a photo"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 16.2c0-2 1.4-3.3 3.3-3.4l6-.2 2.6-4.1c.5-.8 1.2-1.1 2.1-1.1l7.4.1c.9 0 1.6.4 2 1.1l2.5 4 6.3.1c1.9 0 3.1 1.5 3.1 3.4l-.3 19.2c0 1.9-1.4 3.2-3.3 3.2L9.6 38.8c-1.9 0-3.2-1.4-3.2-3.3z"/><circle cx="24" cy="25.5" r="8.2"/><path d="M19.6 23.2c.8-2 2.6-3.3 4.7-3.4" stroke-width="1.8"/><path d="M35.2 18.4h2.4M10.5 12.6V10.4h4.2"/></svg></button></div><div class="hint" id="placeh" hidden></div><input type="file" id="upf" accept="image/*" multiple hidden><div class="toast" id="toast" hidden></div><input type="file" id="cam" accept="image/*" capture="environment" hidden>
 </main>
-<nav><button class="tab" id="tm" aria-pressed="true">Map</button><button class="tab" id="td" aria-pressed="false">Mushroomdex</button></nav>
+<nav><button class="tab" id="tm" aria-pressed="true">Map</button><button class="tab" id="td" aria-pressed="false">Mushroomdex</button><button class="tab" id="tj" aria-pressed="false">Journal</button></nav>
 </div>
 <div id="ovl"></div>
 <script>
@@ -200,9 +250,108 @@ st.finds=st.finds||[];
 const DB=()=>new Promise((res,rej)=>{const r=indexedDB.open('ff',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
 const idbGet=async k=>{try{const d=await DB();return await new Promise(r=>{const q=d.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>r(q.result);q.onerror=()=>r(undefined)})}catch(e){return undefined}};
 const idbSet=async(k,v)=>{try{const d=await DB();return await new Promise(r=>{const x=d.transaction('kv','readwrite');x.objectStore('kv').put(v,k);x.oncomplete=()=>r(true);x.onerror=()=>r(false)})}catch(e){return false}};
-const save=()=>{idbSet('st',st)};
-const lvl=()=>1+Math.floor(st.xp/60);
-function hud(){$('#lvl').textContent='Level '+lvl()+' · '+Object.keys(st.got).length+'/'+S.length+' found';$('#xpb').style.width=(st.xp%60)/60*100+'%'}
+const save=()=>{progress();idbSet('st',st)};
+const XPR={common:10,uncommon:25,rare:50},LVXP=60;
+const RANKS=[[1,'Spore'],[3,'Sprout'],[6,'Forager'],[10,'Woodland Tracker'],[16,'Field Mycologist'],[25,'Spore Sage'],[40,'Master of Mycelium'],[60,'Keeper of Decay']];
+const rankOf=l=>RANKS.filter(r=>l>=r[0]).pop()[1];
+const lvl=()=>1+Math.floor((st.xp||0)/LVXP);
+const dayN=t=>{const d=new Date(t);return Math.round(new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()/864e5)};
+const s4=t=>{const m=new Date(t).getMonth();return m===11||m<2?'Winter':m<5?'Spring':m<8?'Summer':'Fall'};
+const s4key=t=>{const d=new Date(t),m=d.getMonth();return (m===11?d.getFullYear()+1:d.getFullYear())+'-'+s4(t)};
+const kmB=(a,b)=>{const R=6371,r=Math.PI/180,dl=(b.lat-a.lat)*r,dn=(b.lon-a.lon)*r,x=Math.sin(dl/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(x))};
+const satOf=t=>{const d=new Date(t).getDay();return d===6?dayN(t):d===0?dayN(t)-1:null};
+function sortedFinds(){return (st.finds||[]).filter(f=>byId(f.id)&&f.t).slice().sort((a,b)=>a.t-b.t)}
+function areaFinds(F){const A=[];F.forEach(f=>{if(f.lat==null||f.ls==='tap')return;if(A.every(a=>kmB(a,f)>1))A.push(f)});return A}
+function weekendSet(F){return [...new Set(F.map(f=>satOf(f.t)).filter(x=>x!=null))].sort((a,b)=>a-b)}
+const FAM=(f,n)=>S.filter(s=>s.f===f).map(s=>s.id);
+const has=(sp,ids)=>ids.every(i=>sp.has(i));
+const CHANT=S.filter(s=>/chanterelle/i.test(s.n)).map(s=>s.id),MOREL=S.filter(s=>/morel/i.test(s.n)).map(s=>s.id),CONKS=S.filter(s=>s.f==='Stem-decay conks'||s.f==='Polypores').map(s=>s.id),DEADLY=S.filter(s=>s.h==='deadly').map(s=>s.id),POIS=S.filter(s=>s.h==='poisonous').map(s=>s.id),DAMAN=S.filter(s=>s.f==='Amanitas'&&s.h==='deadly').map(s=>s.id);
+const famA=(id,n,f,x,i)=>({id,n,h:'Find every species in '+f+' ('+FAM(f).length+')',x,i,t:c=>has(c.sp,FAM(f))});
+const ACH=[
+{id:'first',n:'First Spore',h:'Log your first find',x:10,i:'mush',t:c=>c.F.length>=1},
+{id:'ten',n:'Field Notes',h:'Log 10 finds',x:20,i:'book',t:c=>c.F.length>=10},
+{id:'fifty',n:'Satchel Full',h:'Log 50 finds',x:50,i:'book',t:c=>c.F.length>=50},
+{id:'century',n:'Century',h:'Log 100 finds',x:100,i:'star',t:c=>c.F.length>=100},
+{id:'d25',n:'Quarter Dex',h:'Find 25 different species',x:25,i:'mush',t:c=>c.sp.size>=25},
+{id:'d50',n:'Half-Century Dex',h:'Find 50 different species',x:50,i:'mush',t:c=>c.sp.size>=50},
+{id:'d100',n:'Hundred Species',h:'Find 100 different species',x:100,i:'star',t:c=>c.sp.size>=100},
+{id:'dall',n:'Keeper of the Dex',h:'Find all '+S.length+' species',x:300,i:'star',t:c=>c.sp.size>=S.length},
+{id:'rare1',n:'First Rare',h:'Find a rare species',x:20,i:'eye',t:c=>[...c.sp].some(i=>byId(i).r==='rare')},
+{id:'deathcap',n:'Death Cap Detective',h:'Log a deadly Amanita',x:25,i:'skull',dz:1,t:c=>DAMAN.some(i=>c.sp.has(i))},
+{id:'enemy',n:'Know Your Enemy',h:'Log 3 different deadly species',x:50,i:'skull',dz:1,t:c=>DEADLY.filter(i=>c.sp.has(i)).length>=3},
+{id:'poison',n:'Poison Ledger',h:'Log 10 different poisonous species',x:40,i:'skull',dz:1,t:c=>POIS.filter(i=>c.sp.has(i)).length>=10},
+{id:'conk',n:'Conk Collector',h:'Log 5 species of conks or polypores',x:30,i:'conk',t:c=>CONKS.filter(i=>c.sp.has(i)).length>=5},
+{id:'tooth',n:'Tooth Fairy',h:'Find every tooth fungus ('+FAM('Tooth fungi').length+')',x:75,i:'tooth',t:c=>has(c.sp,FAM('Tooth fungi'))},
+{id:'chant',n:'Chanterelle Champion',h:'Find all '+CHANT.length+' chanterelles, true and false',x:50,i:'mush',t:c=>has(c.sp,CHANT)},
+{id:'morel',n:'Morel Maze',h:'Log a morel or false morel',x:15,i:'leaf',t:c=>MOREL.some(i=>c.sp.has(i))},
+{id:'seasons',n:'Four Seasons',h:'Finds in winter, spring, summer and fall',x:40,i:'leaf',t:c=>c.s4.size>=4},
+{id:'rainy',n:'Rainy Day Forager',h:'Log 10 finds in one calendar month',x:30,i:'cal',t:c=>c.maxMonth>=10},
+{id:'sharp',n:'Sharp Eye',h:'Save 3 photos of one find (2 extra angles)',x:15,i:'cam',t:c=>c.F.some(f=>f.p&&f.x&&f.x.length>=2)},
+{id:'shutter',n:'Shutterbug',h:'Add 20 extra angle photos in total',x:25,i:'cam',t:c=>c.angles>=20},
+{id:'mapper',n:'Mapmaker',h:'Log finds in 5 areas at least 1 km apart',x:30,i:'pin',t:c=>c.areas>=5},
+{id:'weekend',n:'Weekend Warrior',h:'Log finds on 3 weekends in a row',x:30,i:'cal',t:c=>c.wkStreak>=3},
+{id:'ai',n:'Second Pair of Eyes',h:'Save a find auto-identified at 75% or more',x:15,i:'eye',t:c=>c.F.some(f=>f.cf>=75&&f.ai===f.id)},
+famA('amanitas','Amanita Archivist','Amanitas',60,'mush'),
+famA('boletes','Bolete Bookkeeper','Boletes',75,'mush'),
+famA('coral','Coral Keeper','Clubs & coral',50,'coral'),
+famA('wood','Stump Stalker','Wood clusters',90,'conk'),
+famA('odd','Cabinet of Oddities','Odd bodies',150,'eye'),
+famA('colored','Painted Caps','Colored caps',110,'mush'),
+famA('lbm','LBM Whisperer','Little brown caps',120,'skull'),
+famA('heart','Heartwood Hunter','Stem-decay conks',75,'conk'),
+famA('poly','Polypore Patron','Polypores',75,'conk'),
+{id:'owl',n:'Night Owl',h:'Log a find between 9 pm and 4 am',x:20,i:'moon',hid:1,t:c=>c.F.some(f=>{const h=new Date(f.t).getHours();return h>=21||h<4})},
+{id:'lucky',n:'Lucky',h:'A rare species as your first find of the day',x:25,i:'clover',hid:1,t:c=>c.lucky},
+{id:'second',n:'Second Opinion',h:'Save a different species than auto-identify’s top pick',x:15,i:'eye',hid:1,t:c=>c.F.some(f=>f.ai&&byId(f.ai)&&f.ai!==f.id)},
+{id:'story',n:'Storybook',h:'Log 5 fly agarics',x:20,i:'mush',hid:1,t:c=>c.F.filter(f=>f.id==='fly').length>=5}];
+const ACHX=Object.fromEntries(ACH.map(a=>[a.id,a]));
+function achCtx(){const F=sortedFinds(),sp=new Set(F.map(f=>f.id));Object.keys(st.got||{}).forEach(k=>{if(byId(k)&&st.got[k]>0)sp.add(k)});
+const mo={};F.forEach(f=>{const d=new Date(f.t),k=d.getFullYear()*12+d.getMonth();mo[k]=(mo[k]||0)+1});
+const W=weekendSet(F);let best=W.length?1:0,run=1;for(let i=1;i<W.length;i++){run=W[i]-W[i-1]===7?run+1:1;best=Math.max(best,run)}
+const firstOfDay={};F.forEach(f=>{const k=dayN(f.t);if(!firstOfDay[k])firstOfDay[k]=f});
+return{F,sp,s4:new Set(F.map(f=>s4(f.t))),maxMonth:Math.max(0,...Object.values(mo)),angles:F.reduce((a,f)=>a+(f.x?f.x.length:0),0),areas:areaFinds(F).length,wkStreak:best,lucky:Object.values(firstOfDay).some(f=>byId(f.id).r==='rare')}}
+function xpCalc(){const F=sortedFinds(),b={species:0,repeat:0,angles:0,season:0,area:0,weekend:0,ach:0,game:st.gx||0},seen=new Set(),sk=new Set(),ad=new Set();
+F.forEach(f=>{const s=byId(f.id);if(!seen.has(f.id)){seen.add(f.id);b.species+=XPR[s.r]||10}else b.repeat+=2;if(f.p&&f.x)b.angles+=Math.min(f.x.length,3);const k=s4key(f.t);if(!sk.has(k)){sk.add(k);b.season+=10}});
+areaFinds(F).forEach(f=>{const k=dayN(f.t);if(!ad.has(k)){ad.add(k);b.area+=5}});
+const W=new Set(weekendSet(F));W.forEach(w=>{if(W.has(w-7))b.weekend+=5});
+Object.keys(st.ach||{}).forEach(k=>{if(ACHX[k])b.ach+=ACHX[k].x});
+b.total=Object.values(b).reduce((a,v)=>a+v,0);return b}
+let lastGain=0;
+function progress(quiet){st.ach=st.ach||{};let mig=false;if(!st.v15){st.v15=1;mig=true;quiet=1}
+const c=achCtx(),newly=ACH.filter(a=>!st.ach[a.id]&&a.t(c));newly.forEach(a=>{st.ach[a.id]=Date.now()});
+const b=xpCalc();if(mig||st.xpAdj==null)st.xpAdj=Math.max(0,(st.xp||0)-(b.total-b.ach));
+const before=st.xp||0;let x=b.total+st.xpAdj;if(x<(st.xpHi||0))x=st.xpHi;st.xp=x;st.xpHi=Math.max(st.xpHi||0,x);st.xpB=b;lastGain=x-before;
+if(newly.length){if(quiet||newly.length>3)setTimeout(()=>toast((mig?'Journal updated: ':'')+newly.length+' stamp'+(newly.length>1?'s':'')+' earned (+'+newly.reduce((a,x)=>a+x.x,0)+' XP). See the Journal tab.'),400);else newly.forEach(stampPop)}
+if(typeof lookCheck==='function')lookCheck();return newly}
+function hud(){const l=lvl();$('#rank').textContent=rankOf(l);$('#lvl').textContent='Lv '+l+' · '+Object.keys(st.got).filter(k=>byId(k)).length+'/'+S.length;$('#xpb').style.width=((st.xp||0)%LVXP)/LVXP*100+'%';$('#xpb').parentNode.title=(st.xp||0)+' XP';if(!$('#ach').hidden)drawAch()}
+const ICON={mush:'M3 12.5c0-5 4-8.5 9-8.5s9 3.5 9 8.5z M9.2 12.5v5.8c0 1.4 1.2 2.4 2.8 2.4s2.8-1 2.8-2.4v-5.8 M8 8.5h.01 M15 7.5h.01 M12 6.5h.01',star:'M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.6 6.7 19.4l1.2-6L3.4 9.3l6-.7z',skull:'M5 11a7 7 0 1 1 14 0c0 2.5-1.2 3.8-2.5 4.6V19h-9v-3.4C6.2 14.8 5 13.5 5 11z M8.3 11a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0-2.8 0 M12.9 11a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0-2.8 0 M10.5 19v-2 M13.5 19v-2',cam:'M4 8.5h3.2l1.9-2.6h5.8l1.9 2.6H20v10.5H4z M12 10.7a3.4 3.4 0 1 0 0 6.8a3.4 3.4 0 1 0 0-6.8',pin:'M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z M12 7.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5',moon:'M19 15.5A8 8 0 0 1 8.5 5a8 8 0 1 0 10.5 10.5z M17 4.5v3 M15.5 6h3',leaf:'M5 19C5 10 10 5 20 4c0 10-5 15-14 15z M5 19l8-8',clover:'M12 12a3 3 0 1 1-3-3a3 3 0 0 1 3 3 M12 12a3 3 0 1 1 3-3a3 3 0 0 1-3 3 M12 12a3 3 0 1 1 3 3a3 3 0 0 1-3-3 M12 12a3 3 0 1 1-3 3a3 3 0 0 1 3-3 M12 12l3 9',book:'M4 5.5c3-1 6-1 8 1v13c-2-2-5-2-8-1z M20 5.5c-3-1-6-1-8 1v13c2-2 5-2 8-1z',eye:'M2.5 12S6 6 12 6s9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12z M12 9.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5',cal:'M4 6h16v14H4z M4 10h16 M8 3.5v4 M16 3.5v4 M8 14h.01 M12 14h.01 M16 14h.01',tooth:'M4 6.5h16 M6 6.5v6 M9 6.5v9 M12 6.5v7 M15 6.5v10 M18 6.5v5',conk:'M3 10.5c4-5.5 14-5.5 18 0-4 2.2-14 2.2-18 0z M5 12.5c3 3 11 3 14 0 M3 10.5v-2 M21 10.5v-2',coral:'M12 21v-7 M12 14l-4-4V5.5 M12 14l4-4V4.5 M8 10l-3-2.5 M16 10l3-1.5 M8 7l-1.5-2'};
+const STC=['var(--rust)','var(--pine)','var(--ochre)','var(--ink2)'];
+const hsh=s=>[...s].reduce((a,c)=>(a*31+c.charCodeAt(0))|0,7);
+function stampSvg(a,on){if(!on)return `<svg viewBox="0 0 100 100" class="stamp off" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 6"/>${a.hid?'<text x="50" y="60" text-anchor="middle" font-size="30" fill="currentColor" font-family="IM Fell English,Georgia,serif">?</text>':''}</svg>`;
+const h=hsh(a.id),col=a.dz?'var(--deadly)':STC[Math.abs(h)%4],rot=(Math.abs(h)%17)-8;
+return `<svg viewBox="0 0 100 100" class="stamp on" style="color:${col};transform:rotate(${rot}deg)" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="4.5"/><circle cx="50" cy="50" r="38.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2.5 3.5"/><path d="M50 9l1.6 3.2 3.4.4-2.5 2.3.6 3.4L50 16.7l-3.1 1.6.6-3.4-2.5-2.3 3.4-.4z" fill="currentColor"/><g transform="translate(26 25) scale(2)" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${ICON[a.i]||ICON.star}"/></g></svg>`}
+let stq=[],stOn=0;
+function stampPop(a){stq.push(a);if(!stOn)nextStamp()}
+function nextStamp(){const a=stq.shift();if(!a){stOn=0;return}stOn=1;const e=document.createElement('div');e.className='stpop';e.setAttribute('role','status');e.innerHTML=`${stampSvg(a,1)}<div class="lab"><b>${esc(a.n)}</b><small>${esc(a.h)} · +${a.x} XP</small></div>`;document.body.appendChild(e);toast('Stamp earned: '+a.n+' (+'+a.x+' XP)');setTimeout(()=>e.classList.add('out'),2600);setTimeout(()=>{e.remove();nextStamp()},3100)}
+const SKINS=[{id:'auto',n:'Auto',d:'Parchment by day, Night Journal when your phone is in dark mode',sw:['#ecdfc2','#231a12','#8c3b20']},{id:'parchment',n:'Parchment',d:'The classic field journal',sw:['#ecdfc2','#36261a','#8c3b20']},{id:'night',n:'Night Journal',d:'Lamp-lit pages for dark evenings',sw:['#231a12','#f0e3c8','#c46a43']},{id:'moss',n:'Rainforest Moss',lv:5,a:'conk',sw:['#dfe3c8','#22301d','#2f5a2c']},{id:'rust',n:'Autumn Rust',lv:10,a:'seasons',sw:['#ead2b4','#3a1f12','#a3401c']},{id:'gilded',n:'Gilded Edition',lv:30,a:'d100',sw:['#efe6cf','#2a1d12','#b8963d']}];
+const PINS=[{id:'ink',n:'Ink ring'},{id:'seal',n:'Wax seal',lv:3,a:'ten'},{id:'brass',n:'Brass tack',lv:12,a:'mapper'}];
+const FRAMES=[{id:'ink',n:'Ink rule'},{id:'polaroid',n:'Field polaroid',lv:6,a:'sharp'},{id:'gilt',n:'Gilt frame',lv:20,a:'d50'}];
+const LOOKS={skin:SKINS,pin:PINS,frame:FRAMES};
+const unlocked=o=>!o.lv||lvl()>=o.lv||!!(st.ach&&st.ach[o.a]);
+const reqTxt=o=>'Unlocks at Level '+o.lv+' or with the '+(ACHX[o.a].hid&&!(st.ach||{})[o.a]?'a hidden':'“'+ACHX[o.a].n+'”')+' stamp';
+function getLook(){try{return Object.assign({skin:'auto',pin:'ink',frame:'ink'},JSON.parse(localStorage.getItem('ff-look')||'{}'))}catch(e){return{skin:'auto',pin:'ink',frame:'ink'}}}
+function applyLook(L){const r=document.documentElement;r.removeAttribute('data-skin');if(L.skin==='auto')r.removeAttribute('data-theme');else if(L.skin==='night')r.setAttribute('data-theme','dark');else{r.setAttribute('data-theme','light');if(L.skin!=='parchment')r.setAttribute('data-skin',L.skin)}
+const b=document.body;b.classList.remove('pins-seal','pins-brass','frames-polaroid','frames-gilt');if(L.pin!=='ink')b.classList.add('pins-'+L.pin);if(L.frame!=='ink')b.classList.add('frames-'+L.frame)}
+function setLook(k,v){const L=getLook(),o=LOOKS[k].find(x=>x.id===v);if(!o||!unlocked(o))return false;L[k]=v;try{localStorage.setItem('ff-look',JSON.stringify(L))}catch(e){}applyLook(L);return true}
+function lookCheck(){const L=getLook();let ch=0;for(const k in LOOKS){const o=LOOKS[k].find(x=>x.id===L[k]);if(!o||!unlocked(o)){L[k]=LOOKS[k][0].id;ch=1}}applyLook(L)}
+function lookRows(k,title){const L=getLook();return `<h3 class="jh">${title}</h3><div class="looks">${LOOKS[k].map(o=>{const u=unlocked(o),on=L[k]===o.id;return `<button class="lk ${on?'on':''}" data-k="${k}" data-v="${o.id}" ${u?'':'aria-disabled="true"'}>${k==='skin'?`<span class="sw">${o.sw.map(c=>`<i style="background:${c}"></i>`).join('')}</span>`:`<span class="sw pv pv-${k}-${o.id}"></span>`}<span><b>${o.n}${on?' ✓':''}</b><br><small>${u?(o.d||'Unlocked'):'🔒 '+reqTxt(o)}</small></span></button>`}).join('')}</div>`}
+function drawAch(){const d=$('#ach'),b=st.xpB||xpCalc(),l=lvl(),got=ACH.filter(a=>st.ach&&st.ach[a.id]).length,nx=RANKS.find(r=>r[0]>l);
+d.innerHTML=`<div class="jpage"><h2>Field Journal</h2><p class="rk"><b>${rankOf(l)}</b> · Level ${l}</p><div class="bar big"><i style="width:${((st.xp||0)%LVXP)/LVXP*100}%"></i></div><p class="mute">${st.xp||0} XP · ${LVXP-((st.xp||0)%LVXP)} XP to Level ${l+1}${nx?' · “'+nx[1]+'” at Level '+nx[0]:''}</p>
+<table class="xpt"><tr><td>New species</td><td>${b.species}</td></tr><tr><td>Repeat finds</td><td>${b.repeat}</td></tr><tr><td>Extra angles</td><td>${b.angles}</td></tr><tr><td>Season firsts</td><td>${b.season}</td></tr><tr><td>New areas</td><td>${b.area}</td></tr><tr><td>Weekend streaks</td><td>${b.weekend}</td></tr><tr><td>Stamps</td><td>${b.ach}</td></tr>${b.game?`<tr><td>Map game</td><td>${b.game}</td></tr>`:''}${st.xpAdj?`<tr><td>Carried over from earlier versions</td><td>${st.xpAdj}</td></tr>`:''}</table></div>
+<div class="jpage"><h2>Stamps</h2><p class="mute">${got} of ${ACH.length} earned</p><div class="stamps">${ACH.map(a=>{const on=!!(st.ach&&st.ach[a.id]),hide=a.hid&&!on;return `<div class="sc ${on?'got':''}">${stampSvg(a,on)}<b>${hide?'???':esc(a.n)}</b><small>${hide?'A hidden stamp':esc(a.h)}</small><span class="xp">${hide?'? XP':'+'+a.x+' XP'}</span></div>`}).join('')}</div></div>
+<div class="jpage" id="looks">${lookRows('skin','Journal themes')}${lookRows('pin','Map pins')}${lookRows('frame','Photo frames')}</div>
+<div class="jpage"><h2>How XP works</h2><ul class="rules"><li>New species: common 10, uncommon 25, rare 50</li><li>Repeat find of a species: 2</li><li>Extra photo angle: 1 each, up to 3 per find</li><li>First find of each season (winter, spring, summer, fall): 10</li><li>Find in a new area, 1 km or more from earlier finds: 5 (once a day; hand-placed pins don't count)</li><li>Finds on back-to-back weekends: 5 per weekend in the streak</li><li>Each stamp: its listed XP</li><li>Deleting a find never lowers your XP, and re-adding it doesn't earn it twice.</li></ul></div>`;
+d.querySelectorAll('.lk').forEach(b=>b.onclick=()=>{const o=LOOKS[b.dataset.k].find(x=>x.id===b.dataset.v);if(!unlocked(o)){toast(reqTxt(o)+'.');return}setLook(b.dataset.k,b.dataset.v);const y=d.scrollTop;drawAch();d.scrollTop=y;toast(o.n+' applied')})}
 const SPOTS=[[34,12],[56,9],[82,14],[44,31],[84,38],[34,47],[62,51],[82,62],[40,66],[64,73],[82,79],[31,80]];
 let spawns=[],me={x:46,y:58};
 ['art','hrt','qui','rrr','pnt','obc','rbc','tky','hoof'].forEach(i=>{byId(i).s='All year'});
@@ -268,14 +417,14 @@ att={photo,l,c};document.querySelectorAll('.chp').forEach(b=>b.onclick=()=>attLi
 function attMap(){const a=att;close();tab('m');att=a;$('#camb').hidden=true;$('#upb').hidden=true;const h=$('#placeh');h.hidden=false;h.innerHTML=`<b>Tap the find's photo pin</b> to add this photo as another angle.<div class="row"><button class="btn alt" id="amx">Back</button></div>`;$('#amx').onclick=()=>{const a=att;endAtt();sheet(a.photo,a.l,a.c)};const P=st.finds.filter(f=>f.lat!=null);if(P.length){const b=L.latLngBounds(P.map(f=>[f.lat,f.lon]));if(!map.getBounds().intersects(b))map.fitBounds(b.pad(.3),{maxZoom:16})}}
 function endAtt(){att=null;const h=$('#placeh');if(!placing){h.hidden=true;h.innerHTML=''}if(!$('#map').hidden){$('#camb').hidden=false;$('#upb').hidden=false}}
 function attConfirm(i){const f=st.finds[i],a=att;if(!f||!a)return;const s=byId(f.id);$('#placeh').hidden=true;
-$('#ovl').innerHTML=`<div class="ov"><div class="card"><h2>Add this photo as another angle of this find?</h2><div class="two"><img src="${a.photo}" alt="New photo"><span>→</span><img src="${f.p||IMG[f.id]}" alt="Existing find"></div><p><b>${esc(s?s.n:f.id)}</b><br><small class="mute">Found ${fmtD(f.t)}${fmtM(dist(a.l,f))}${f.x&&f.x.length?' · '+(f.x.length+1)+' photos so far':''}</small></p><p class="mute">No new find is created and no XP is added.</p><button class="btn" id="aok">Add as another angle</button> <button class="btn alt" id="acx">Cancel</button></div></div>`;
+$('#ovl').innerHTML=`<div class="ov"><div class="card"><h2>Add this photo as another angle of this find?</h2><div class="two"><img src="${a.photo}" alt="New photo"><span>→</span><img src="${f.p||IMG[f.id]}" alt="Existing find"></div><p><b>${esc(s?s.n:f.id)}</b><br><small class="mute">Found ${fmtD(f.t)}${fmtM(dist(a.l,f))}${f.x&&f.x.length?' · '+(f.x.length+1)+' photos so far':''}</small></p><p class="mute">No new find is created. Extra angles earn 1 XP each, up to 3 per find.</p><button class="btn" id="aok">Add as another angle</button> <button class="btn alt" id="acx">Cancel</button></div></div>`;
 $('#acx').onclick=()=>{if($('#map').hidden||!$('#amx'))return attList(a.photo,a.l,a.c,null);close();$('#placeh').hidden=false};
 $('#aok').onclick=()=>{if(f.p){f.x=f.x||[];f.x.push({p:a.photo,t:cur&&cur.d?cur.d:Date.now(),lat:a.l?a.l.lat:null,lon:a.l?a.l.lon:null})}else f.p=a.photo;if(pendT){st.later=(st.later||[]).filter(x=>x.t!==pendT);pendT=null}save();endAtt();close();drawMap();if(!$('#dex').hidden)drawDex();toast('Added as another angle of '+(s?s.n:'that find'));if(cur&&cur.q)setTimeout(nextUp,600);else cur=null}}
 function delAngle(i,j){const f=st.finds[i];if(!f||!f.x||!f.x[j])return;if(!confirm('Delete this extra photo? The find itself stays.'))return;f.x.splice(j,1);if(!f.x.length)delete f.x;save();toast('Photo deleted');detail(byId(f.id))}
 function delFind(i){const f=st.finds[i];if(!f)return;const s=byId(f.id);if(!confirm('Delete this find'+(f.p?' and its photo':'')+' ('+(s?s.n:f.id)+', '+fmtD(f.t)+')? This cannot be undone. XP is kept.'))return;st.finds.splice(i,1);st.got[f.id]=(st.got[f.id]||1)-1;if(st.got[f.id]<=0)delete st.got[f.id];save();hud();drawMap();if(!$('#dex').hidden)drawDex();toast('Find deleted');if(s)detail(s);else close()}
 function moveFind(i,nid){const f=st.finds[i],n=byId(nid);if(!f||!n||nid===f.id)return;const o=f.id;st.got[o]=(st.got[o]||1)-1;if(st.got[o]<=0)delete st.got[o];st.got[nid]=(st.got[nid]||0)+1;f.id=nid;if(f.cs){const m=f.cs.find(x=>x.id===nid);f.cf=m?m.pct:null}save();hud();if(!$('#map').hidden)drawMap();if(!$('#dex').hidden)drawDex();toast('Changed to '+n.n);detail(n)}
-function take(id,photo,l,c){if(!byId(id))return;const s=byId(id),isNew=!st.got[id];st.got[id]=(st.got[id]||0)+1;st.xp+=R[s.r][2]+(isNew?15:0);st.finds.push(Object.assign({id,t:cur&&cur.d?cur.d:Date.now(),lat:l?l.lat:null,lon:l?l.lon:null,p:photo},idInfo(id,c),cur&&cur.d?{se:cur.se,up:1,dq:cur.dq||0,ls:l?l.src||null:null}:{}));if(pendT){st.later=(st.later||[]).filter(x=>x.t!==pendT);pendT=null}save();hud();done(id,l)}
-function done(id,l){const s=byId(id);$('#ovl').innerHTML=`<div class="ov"><div class="card"><h2>Added to your Mushroomdex</h2>${art(s,'art','stk')}<h3>${s.n}</h3><span class="badge" style="--c:var(${H[s.h][1]})">${H[s.h][0]}</span><p class="mute">${l?(l.acc?'Pinned on the map (about '+l.acc+' m).':l.src==='tap'?'Pinned where you placed it.':'Pinned on the map.'):'No map pin for this one.'}${cur&&cur.d?'<br>Found '+fmtD(cur.d)+' · '+cur.se:''}</p><button class="btn" id="ok">${cur&&cur.q&&Q.length?'Next photo ('+Q.length+' left)':'Keep hunting'}</button></div></div>`;$('#ok').onclick=()=>{close();drawMap();if(!$('#dex').hidden)drawDex();if(cur&&cur.q)nextUp();else cur=null}}
+function take(id,photo,l,c){if(!byId(id))return;const s=byId(id);st.got[id]=(st.got[id]||0)+1;st.finds.push(Object.assign({id,t:cur&&cur.d?cur.d:Date.now(),lat:l?l.lat:null,lon:l?l.lon:null,p:photo},idInfo(id,c),l&&l.src?{ls:l.src}:{},cur&&cur.d?{se:cur.se,up:1,dq:cur.dq||0,ls:l?l.src||null:null}:{}));if(pendT){st.later=(st.later||[]).filter(x=>x.t!==pendT);pendT=null}save();hud();done(id,l)}
+function done(id,l){const s=byId(id);$('#ovl').innerHTML=`<div class="ov"><div class="card"><h2>Added to your Mushroomdex</h2>${art(s,'art','stk')}<h3>${s.n}</h3>${lastGain>0?`<p class="gain">+${lastGain} XP</p>`:''}<span class="badge" style="--c:var(${H[s.h][1]})">${H[s.h][0]}</span><p class="mute">${l?(l.acc?'Pinned on the map (about '+l.acc+' m).':l.src==='tap'?'Pinned where you placed it.':'Pinned on the map.'):'No map pin for this one.'}${cur&&cur.d?'<br>Found '+fmtD(cur.d)+' · '+cur.se:''}</p><button class="btn" id="ok">${cur&&cur.q&&Q.length?'Next photo ('+Q.length+' left)':'Keep hunting'}</button></div></div>`;$('#ok').onclick=()=>{close();drawMap();if(!$('#dex').hidden)drawDex();if(cur&&cur.q)nextUp();else cur=null}}
 function keyset(){let k='';try{k=localStorage.getItem('ff-key')||''}catch(e){}
 $('#ovl').innerHTML=`<div class="ov"><div class="card"><h2>Auto-identify key</h2><p class="mute" id="kst">${k?'A key is saved (ends in …'+k.slice(-4)+').':'No key saved yet.'}</p><textarea id="kin" rows="3" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Paste your sk-ant-… key here" style="width:100%;box-sizing:border-box;font:14px monospace;padding:10px;border-radius:10px;border:1px solid #bbb;margin:8px 0"></textarea><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><button class="btn" id="ksv">Save &amp; test</button>${k?'<button class="btn alt" id="krm">Remove key</button>':''}<button class="btn alt" id="kcx">Close</button></div></div></div>`;
 $('#kcx').onclick=close;if($('#krm'))$('#krm').onclick=()=>{try{localStorage.removeItem('ff-key')}catch(e){}close();toast('Key removed. Auto-identify is off.')};
@@ -291,7 +440,7 @@ const sh=$('#shr'),D=2000,sc=()=>{const k=((performance.now()-t0)%D)/D;return 2.
 const tick=()=>{if(done)return;sh.style.transform=`translate(-50%,-50%) scale(${sc()})`;raf=requestAnimationFrame(tick)};tick();
 $('#col').onclick=()=>{done=1;cancelAnimationFrame(raf);const e=Math.abs(sc()-1);const q=e<.12?['Perfect!',10]:e<.35?['Great!',5]:['Nice!',0];reveal(i,q)}}
 function reveal(i,q){const p=spawns[i],s=byId(p.id),isNew=!st.got[s.id],gain=R[s.r][2]+q[1]+(isNew?15:0);
-st.got[s.id]=(st.got[s.id]||0)+1;st.xp+=gain;save();hud();
+st.got[s.id]=(st.got[s.id]||0)+1;st.gx=(st.gx||0)+gain;save();hud();
 $('#ovl').innerHTML=`<div class="ov"><div class="card"><h2>${q[0]}${isNew?' New entry!':''}</h2>${art(s,'art','stk')}<h3>${s.n}</h3><p class="mute"><i>${s.l}</i></p><span class="badge" style="--c:var(${H[s.h][1]})">${H[s.h][0]}</span><p>+${gain} XP</p><button class="btn" id="ok">Keep hunting</button></div></div>`;
 $('#ok').onclick=()=>{close();spawns.splice(i,1);fill();drawMap()}}
 let dexQ='';function dexFilter(){const v=dexQ.trim().toLowerCase();document.querySelectorAll('#dex .fam[data-f]').forEach(h=>{const g=h.nextElementSibling;let a=0;g.querySelectorAll('.tile[data-k]').forEach(b=>{b.hidden=!!v&&!b.dataset.k.includes(v);if(!b.hidden)a++});h.hidden=g.hidden=!a})}
@@ -302,16 +451,16 @@ return `<div class="fam" data-f="${esc(f)}"><h2>${f}</h2><span>${n}/${L.length}$
 $('#dq').oninput=()=>{dexQ=$('#dq').value;dexFilter()};dexFilter();d.querySelectorAll('.lt').forEach(b=>b.onclick=async()=>{const f=st.later[+b.dataset.i];toast('Identifying…');pendT=f.t;cur=f.d?{d:f.d,dq:f.dq||0,se:f.se||seasonOf(f.d)}:null;sheet(f.p,f.lat!=null?{lat:f.lat,lon:f.lon,acc:0,src:f.ls||null}:null,await identify(f.p))});d.querySelectorAll('.tile:not(.lt)').forEach(b=>b.onclick=()=>detail(byId(b.dataset.id)));$('#key').onclick=keyset;$('#exp').onclick=exportData;$('#imp').onclick=()=>$('#impf').click();$('#impf').onchange=importData;$('#rst').onclick=()=>{if(confirm('Reset all progress?')){st={got:{},xp:0,finds:[],later:[]};save();hud();drawDex();drawMap()}}}
 function detail(s){const g=st.got[s.id];
 $('#ovl').innerHTML=`<div class="ov"><div class="card">${art(s,'art',g?'stk':'mg')}${((f)=>f&&f.p?`<img class="ph" src="${f.p}" alt="Your photo of ${s.n}">`:'')((st.finds||[]).slice().reverse().find(x=>x.id===s.id))}<h2>${g?s.n:'Not found yet'}</h2>${g?`<p class="mute"><i>${s.l}</i></p>${s.a&&s.a.length?`<p class="mute aka">Also called: ${esc(s.a.join(' · '))}</p>`:''}<p><span class="badge" style="--c:var(${H[s.h][1]})">${H[s.h][0]}</span> <span class="badge" style="--c:${R[s.r][1]}">${R[s.r][0]}</span></p><p>${s.o}</p>${s.k?`<div class="sec"><h4>How to spot it</h4><p>${esc(s.k)}</p></div>`:''}${s.x?`<div class="sec la${/deadly/i.test(s.x)?' dz':''}"><h4>Lookalikes</h4><p>${esc(s.x)}</p></div>`:''}<p class="mute">Season: ${s.s} · Found ${g}×</p><p class="mute">Never eat a mushroom based on this app.</p>`:`<p class="mute">Family: ${s.f}<br>Season: ${s.s}<br>Rarity: ${R[s.r][0]}</p>`}${((F)=>F.length?`<h3>Your finds</h3>${F.map(([f,i])=>`<div class="cand" style="cursor:default">${f.p?`<img src="${f.p}" alt="" style="object-fit:cover">`:''}<span><small>${fmtD(f.t)}${f.lat!=null?' · on the map':''}</small>${f.cs?`<br><small class="idc">${f.cf!=null?'Auto-ID confidence '+confB(f.cf):'Picked by you'+(f.ai&&byId(f.ai)&&f.ai!==f.id?' (auto-ID top match: '+esc(byId(f.ai).n)+')':'')}</small>${f.cs.length?`<details class="idd"><summary>Auto-ID candidates</summary>${f.cs.map(m=>`<div>${esc(byId(m.id)?byId(m.id).n:m.id)} ${confB(m.pct)}${m.why?' <small class="mute">'+esc(m.why)+'</small>':''}</div>`).join('')}</details>`:''}`:''}${f.x&&f.x.length?`<span class="ang">${f.p?`<span><img src="${f.p}" alt="Main photo"></span>`:''}${f.x.map((x,j)=>`<span><img src="${x.p}" alt="Extra angle"><button class="ax" data-i="${i}" data-j="${j}" aria-label="Delete this photo">×</button></span>`).join('')}</span>`:''}<br><button class="lnk chg" data-i="${i}">Change species</button> · <button class="lnk del" data-i="${i}">Delete</button></span></div>`).join('')}`:'')((st.finds||[]).map((f,i)=>[f,i]).filter(([f])=>f.id===s.id).reverse())}<button class="btn alt" id="x">Close</button></div></div>`;$('#x').onclick=close;document.querySelectorAll('.chg').forEach(b=>b.onclick=()=>changeSp(+b.dataset.i));document.querySelectorAll('.del[data-i]').forEach(b=>b.onclick=()=>delFind(+b.dataset.i));document.querySelectorAll('.ax').forEach(b=>b.onclick=()=>delAngle(+b.dataset.i,+b.dataset.j))}
-function tab(m){if(placing&&m!=='m'){const ph=placing.photo;endPlace();askLoc(ph)}if(att&&m!=='m'){const a=att;endAtt();setTimeout(()=>sheet(a.photo,a.l,a.c),0)}$('#camb').hidden=m!=='m';$('#upb').hidden=m!=='m';$('#loc').hidden=m!=='m';$('#map').hidden=m!=='m';$('#dex').hidden=m!=='d';$('#tm').setAttribute('aria-pressed',m==='m');$('#td').setAttribute('aria-pressed',m==='d');if(m==='d')drawDex();else drawMap()}
-$('#tm').onclick=()=>tab('m');$('#td').onclick=()=>tab('d');
+function tab(m){if(placing&&m!=='m'){const ph=placing.photo;endPlace();askLoc(ph)}if(att&&m!=='m'){const a=att;endAtt();setTimeout(()=>sheet(a.photo,a.l,a.c),0)}$('#camb').hidden=m!=='m';$('#upb').hidden=m!=='m';$('#loc').hidden=m!=='m';$('#map').hidden=m!=='m';$('#dex').hidden=m!=='d';$('#ach').hidden=m!=='a';$('#tm').setAttribute('aria-pressed',m==='m');$('#td').setAttribute('aria-pressed',m==='d');$('#tj').setAttribute('aria-pressed',m==='a');if(m==='d')drawDex();else if(m==='a'){drawAch();$('#ach').scrollTop=0}else drawMap()}
+$('#tm').onclick=()=>tab('m');$('#td').onclick=()=>tab('d');$('#tj').onclick=()=>tab('a');lookCheck();
 drawMap();hud();
 let pendT=null;
 const laterHtml=()=>{const L=st.later||[];return L.length?`<div class="fam"><h2>To identify</h2><span>${L.length} saved</span></div><div class="grid">${L.map((f,i)=>`<button class="tile lt" data-i="${i}"><img src="${f.p}" alt="Saved photo"><div class="n">Tap to identify</div></button>`).join('')}</div>`:''};
-async function exportData(){const b=new Blob([JSON.stringify(st)],{type:'application/json'}),f=new File([b],'forbidden-fruit-backup.json',{type:'application/json'});
+async function exportData(){const b=new Blob([JSON.stringify(st)],{type:'application/json'}),f=new File([b],'shroomadex-backup.json',{type:'application/json'});
 try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f]});return}}catch(e){if(e&&e.name==='AbortError')return}
 const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=f.name;document.body.appendChild(a);a.click();a.remove()}
 function importData(e){const f=e.target.files[0];if(!f)return;f.text().then(x=>{const v=JSON.parse(x);if(!v||!v.got)throw 0;st=v;st.finds=st.finds||[];save();hud();drawDex();drawMap();toast('Backup restored')}).catch(()=>toast('That file is not a backup'))}
-idbGet('st').then(v=>{if(v&&v.got){st=v;st.finds=st.finds||[];hud();drawMap()}});
+idbGet('st').then(v=>{if(v&&v.got){st=v;st.finds=st.finds||[]}save();hud();drawMap()});
 try{navigator.storage.persist()}catch(e){}
 if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 if(!navigator.onLine)toast('Offline: the map shows only areas you viewed before');
