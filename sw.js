@@ -1,4 +1,4 @@
-const APP='ff-app-v15',TILES='ff-tiles',EXT=['https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js','https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css'];
+const APP='ff-app-v16',TILES='ff-tiles',EXT=['https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js','https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(APP).then(async c=>{await c.addAll(['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png','apple-touch-icon.png','logo.svg','fonts/fell.woff2','fonts/fell-italic.woff2'].map(u=>new Request(u,{cache:'reload'})));await Promise.allSettled(EXT.map(u=>c.add(u)))}).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n.startsWith('ff-app')&&n!==APP).map(n=>caches.delete(n)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const r=e.request,u=new URL(r.url);if(r.method!=='GET')return;
