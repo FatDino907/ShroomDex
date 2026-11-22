@@ -1,12 +1,12 @@
 {
- "name": "ShroomDex",
- "short_name": "ShroomDex",
+ "name": "ShroomaDex",
+ "short_name": "ShroomaDex",
  "description": "A mushroom-hunting field journal game",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
- "background_color": "#e4eae6",
- "theme_color": "#2f5d46",
+ "background_color": "#ecdfc2",
+ "theme_color": "#36261a",
  "icons": [
   {
    "src": "icon-192.png",

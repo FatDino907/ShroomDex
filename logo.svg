@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="pg" cx="50%" cy="42%" r="62%"><stop offset="0" stop-color="#f6ecd3"/><stop offset=".72" stop-color="#ead9b3"/><stop offset="1" stop-color="#cfb486"/></radialGradient>
+<radialGradient id="cg" cx="45%" cy="30%" r="75%"><stop offset="0" stop-color="#c4643a"/><stop offset=".7" stop-color="#9a3f22"/><stop offset="1" stop-color="#6e2a16"/></radialGradient>
+<linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#e9dbbb"/><stop offset=".55" stop-color="#f4ead2"/><stop offset="1" stop-color="#cdb68b"/></linearGradient>
+<filter id="r"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter>
+</defs>
+<rect width="512" height="512" fill="#3b2a1a"/>
+<g filter="url(#r)">
+<circle cx="256" cy="256" r="232" fill="url(#pg)"/>
+<circle cx="256" cy="256" r="228" fill="none" stroke="#3b2a1a" stroke-width="9"/>
+<circle cx="256" cy="256" r="208" fill="none" stroke="#3b2a1a" stroke-width="3"/>
+<circle cx="256" cy="256" r="200" fill="none" stroke="#3b2a1a" stroke-width="1.6" stroke-dasharray="2 9" stroke-linecap="round"/>
+<!-- ground and moss -->
+<path d="M118 376c34-12 70-16 104-14 40 2 78 4 112 0 26-3 46-2 62 6" fill="none" stroke="#3b2a1a" stroke-width="5" stroke-linecap="round"/>
+<path d="M132 378c6-14 10-22 18-30M150 376c2-12 6-20 12-26M352 372c4-14 10-22 16-28M372 374c0-12 4-20 10-26M330 370c-2-10 0-18 4-24" fill="none" stroke="#4a5e3a" stroke-width="5" stroke-linecap="round"/>
+<path d="M150 392c30 6 60 8 92 7M276 398c34 0 66-4 92-10" fill="none" stroke="#3b2a1a" stroke-width="2.6" stroke-linecap="round" opacity=".7"/>
+<!-- fern sprig -->
+<path d="M372 368c-6-40 2-78 22-106" fill="none" stroke="#4a5e3a" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M376 340l-18-8M378 322l-17-11M382 304l-14-13M387 287l-11-14M374 352l16-4M378 332l17-2M382 314l16-1M388 296l14-1M393 279l11-3" fill="none" stroke="#4a5e3a" stroke-width="3.6" stroke-linecap="round"/>
+<!-- stem -->
+<path d="M228 238c-4 46-10 92-20 132 30 10 68 10 96 0-10-38-16-84-20-132z" fill="url(#sg)" stroke="#3b2a1a" stroke-width="6" stroke-linejoin="round"/>
+<path d="M226 270c16 8 44 8 62 0" fill="none" stroke="#3b2a1a" stroke-width="4" stroke-linecap="round"/>
+<path d="M226 276c4 10 8 14 12 16M288 276c-4 10-8 14-12 16" fill="none" stroke="#3b2a1a" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M244 300c-2 22-4 42-8 60M270 304c2 20 4 40 8 56" fill="none" stroke="#3b2a1a" stroke-width="2.2" stroke-linecap="round" opacity=".55"/>
+<!-- cap -->
+<path d="M128 236c4-70 60-122 128-122s124 52 128 122c-30 12-80 18-128 18s-98-6-128-18z" fill="url(#cg)" stroke="#3b2a1a" stroke-width="7" stroke-linejoin="round"/>
+<path d="M134 236c36 12 80 16 122 16s86-4 122-16" fill="none" stroke="#3b2a1a" stroke-width="3"/>
+<!-- gills hint -->
+<path d="M150 240l14 10M176 244l10 9M204 247l7 8M232 249l4 8M280 249l-4 8M308 247l-7 8M336 244l-10 9M362 240l-14 10" stroke="#3b2a1a" stroke-width="2.4" stroke-linecap="round"/>
+<!-- warts -->
+<g fill="#f3e6c8" stroke="#3b2a1a" stroke-width="3">
+<ellipse cx="208" cy="160" rx="15" ry="10" transform="rotate(-18 208 160)"/>
+<ellipse cx="268" cy="140" rx="17" ry="11"/>
+<ellipse cx="320" cy="170" rx="13" ry="9" transform="rotate(20 320 170)"/>
+<ellipse cx="170" cy="204" rx="11" ry="8" transform="rotate(-30 170 204)"/>
+<ellipse cx="240" cy="200" rx="12" ry="8"/>
+<ellipse cx="298" cy="214" rx="10" ry="7"/>
+<ellipse cx="350" cy="214" rx="10" ry="7" transform="rotate(25 350 214)"/>
+</g>
+<!-- cap hatching -->
+<path d="M150 212c6-30 20-54 40-72M336 132c26 18 40 44 44 80" fill="none" stroke="#3b2a1a" stroke-width="2.6" stroke-linecap="round" opacity=".55"/>
+<!-- small companion mushroom -->
+<path d="M160 366c2-18 2-30 0-42h16c-2 12-2 24 0 42z" fill="url(#sg)" stroke="#3b2a1a" stroke-width="4" stroke-linejoin="round"/>
+<path d="M140 328c2-22 18-36 28-36s28 14 30 36c-18 6-40 6-58 0z" fill="url(#cg)" stroke="#3b2a1a" stroke-width="4.5" stroke-linejoin="round"/>
+<!-- corner stars -->
+<path d="M256 62l4 10 10 4-10 4-4 10-4-10-10-4 10-4z M256 430l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#3b2a1a"/>
+</g>
+</svg>
