@@ -1,4 +1,4 @@
-/* ShroomaDex avatar v22: one item at a time, each painted onto the character (av/v/{character}-{item}.webp, lazy-loaded) */
+/* ShroomDex avatar v22: one item at a time, each painted onto the character (av/v/{character}-{item}.webp, lazy-loaded) */
 const AVV=22,AVD='av/';
 /* head = [centerX, centerY, width] in the character's 512x512 art, used for the header thumbnail */
 const AVCH={

@@ -1,6 +1,6 @@
 {
- "name": "ShroomaDex",
- "short_name": "ShroomaDex",
+ "name": "ShroomDex",
+ "short_name": "ShroomDex",
  "description": "A mushroom-hunting field journal game",
  "start_url": "./",
  "scope": "./",
